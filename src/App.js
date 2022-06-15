@@ -50,7 +50,7 @@ export default function Home() {
       <VStack justifyContent="center" alignItems="center" h="100vh">
         <HStack marginBottom="10px">
           <Text
-            fontSize="3em"
+            fontSize={["1.5em", "2em", "3em", "4em"]}
             fontWeight="400"
           >
             Connect with Web3-React
