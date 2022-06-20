@@ -33,7 +33,7 @@ export default function SelectWalletModal({ isOpen, closeModal }) {
         />
         <ModalBody paddingBottom="1.5rem">
           <VStack>
-            {window.ethereum?.isLedgerConnect && <Button
+            <Button
               variant="outline"
               onClick={() => {
                 activate(connectors.ledgerConnect);
@@ -52,7 +52,7 @@ export default function SelectWalletModal({ isOpen, closeModal }) {
                 />
                 <Text>Ledger Connect</Text>
               </HStack>
-            </Button>}
+            </Button>
 
             <Button
               variant="outline"
