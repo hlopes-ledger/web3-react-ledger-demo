@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   VStack,
   useDisclosure,
@@ -9,7 +8,6 @@ import {
 import SelectWalletModal from "./Modal";
 import { useWeb3React } from "@web3-react/core";
 import { Tooltip } from "@chakra-ui/react";
-import { connectors } from "./connectors";
 
 export const shortenAddress = (address) => {
   if (!address) return "No Account";
@@ -25,11 +23,9 @@ export default function Home() {
   const {
     chainId,
     account,
-    activate,
     deactivate,
     active
   } = useWeb3React();
-
 
   const disconnect = () => {
     deactivate();

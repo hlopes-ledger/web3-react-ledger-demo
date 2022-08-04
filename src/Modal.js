@@ -36,8 +36,8 @@ export default function SelectWalletModal({ isOpen, closeModal }) {
             <Button
               variant="outline"
               onClick={() => {
-                activate(connectors.ledgerConnect);
-                setProvider("ledgerConnect");
+                activate(connectors.ledger);
+                setProvider("ledger");
                 closeModal();
               }}
               w="100%"
@@ -50,48 +50,7 @@ export default function SelectWalletModal({ isOpen, closeModal }) {
                   height={25}
                   borderRadius="3px"
                 />
-                <Text>Ledger Connect</Text>
-              </HStack>
-            </Button>
-
-            <Button
-              variant="outline"
-              onClick={() => {
-                activate(connectors.coinbaseWallet);
-                setProvider("coinbaseWallet");
-                closeModal();
-              }}
-              w="100%"
-            >
-              <HStack w="100%" justifyContent="center">
-                <Image
-                  src="/cbw.png"
-                  alt="Coinbase Wallet Logo"
-                  width={25}
-                  height={25}
-                  borderRadius="3px"
-                />
-                <Text>Coinbase Wallet</Text>
-              </HStack>
-            </Button>
-            <Button
-              variant="outline"
-              onClick={() => {
-                activate(connectors.walletConnect);
-                setProvider("walletConnect");
-                closeModal();
-              }}
-              w="100%"
-            >
-              <HStack w="100%" justifyContent="center">
-                <Image
-                  src="/wc.png"
-                  alt="Wallet Connect Logo"
-                  width={26}
-                  height={26}
-                  borderRadius="3px"
-                />
-                <Text>Wallet Connect</Text>
+                <Text>Ledger</Text>
               </HStack>
             </Button>
             <Button
@@ -111,7 +70,7 @@ export default function SelectWalletModal({ isOpen, closeModal }) {
                   height={25}
                   borderRadius="3px"
                 />
-                <Text>Metamask</Text>
+                <Text>Injected</Text>
               </HStack>
             </Button>
           </VStack>
